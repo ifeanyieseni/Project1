@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Niconne&display=swap');
+
+:root{
+    --body-color:#12232e;
+    --body-color-lighter:#203647;
+    --first-color:#007cc7;
+   --first-color-lighter:#4da8da;
+    --title-color:#d9d9d9;
+    --text-color:#EEFBFB;
+    --biggest-font-size: 2.25rem;
+  --h1-font-size: 1.3rem;
+  --h2-font-size: 1.15rem;
+  --h3-font-size: 1rem;
+  --font-family1:'Josefin Slab', serif;
+  --font-family2:'Niconne',cursive;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media screen and (min-width: 768px){
+    :root{
+      --biggest-font-size: 4rem;
+      --h1-font-size: 1.75rem;
+      --h3-font-size: 1.25rem;
+    }
+  }
+
+  #preloader{
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(120deg,#4da8da,#203647);
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+    overflow: hidden !important;
+	-webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition:none !important;
+}
+.preloader_img{
+    background: url(img1/Spinner-1s-200px.gif) no-repeat scroll center center;
+    display: block;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 999999;
+    margin-left: -50px;
+    margin-top: -50px;
+
+}
+  /* Global */
+
+body,html{
+    height: 100%;
+}
+
+
+
+.section-text h2{
+    font-family: var(--font-family2);
+    font-weight: 300;
+    color: #007cc7;
+    font-size: var(--biggest-font-size);
+}
+
+
+.section-text h3{
+    font-weight: 700;
+    color: #d9d9d9;
+    font-family: var(--font-family1);
+    font-size: var(--h1-font-size);
+}
+
+.section-text p{
+    font-weight: 200 !important;
+    font-size: 1.25rem;;
+    font-family: var(--font-family1);
+}
+
+.section-text  a.btn{
+    display: inline-block;
+    padding: .45rem 2rem;
+    color: var(--title-color);
+    outline: none !important;
+    border: none !important;
+    text-transform: uppercase;
+    font-family: var(--font-family1);
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 650ms linear;
+   
+}
+
+a.btn:hover{
+    background-color: transparent;
+}
+
+.bg-btn{
+    background: var(--first-color);
+}
+
+/* Header  */
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    
+}
+
+.navbar-brand{
+    background: var(--first-color);
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+.navbar-brand a{
+    color: var(--title-color)!important;
+    font-weight: 800;
+    letter-spacing: .15rem;
+}
+
+
+
+
+.navbar-toggler{
+    font-size: 27px !important;
+    color: var(--first-color) !important;
+    cursor: pointer;
+}
+
+nav ul li{
+    margin-left: 5px;
+}
+
+nav ul li a{
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: var(--font-family1);
+    transition: all 550ms linear;
+    letter-spacing: 1.1px;
+}
+nav ul li a.active{
+    position: relative;
+}
+
+nav ul li a.active::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    display: block;
+    margin: auto;
+    /* border: 2px solid red; */
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 10px solid var(--first-color-lighter);
+}
+
+
+
+nav ul li a:hover{
+   color: var(--title-color) !important;
+}
+
+.dropdown-menu .dropdown-item:hover{
+    background: none;
+    color:var(--title-color);
+}
+
+
+.scroll-header{
+    box-shadow: 0 2px 4px var(--body-color);
+    background-color: var(--body-color-lighter);
+  }
+
+
+
+  /* Showcase  */
+.showcase{
+    height: 100%;
+    background: url(img1/bg1.png);
+    background-position: center;
+    background-size: cover;
+    color:var(--text-color) !important;
+   
+}
+
+.showcase .section-text h3{
+    font-weight: 700;
+    color: var(--title-color);
+    font-family: var(--font-family1);
+    font-size: var(--h1-font-size);
+}
+
+.showcase .section-text h3 .fa-angle-double-right{
+    font-size: 15px !important;
+    color: var(--first-color);
+}
+.showcase .section-text p{
+    font-weight: 200 !important;
+    font-size: 1.25rem;;
+    font-family: var(--font-family1);
+}
+
+.section-text a.btn-showcase,
+.section-text a.btn-mission{
+    background: var(--first-color) !important;
+    position: relative;
+    overflow: hidden;
+   z-index: 1;
+   letter-spacing: .15rem;
+   font-size: 1rem;
+}
+
+
+
+
+.section-text a.btn-showcase::before{
+     content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:var(--first-color-lighter) ;
+    transition: all .3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+
+.section-text a.btn:hover::before{
+    width: 100%;
+}
+
+
+/* About */
+.section-text .btn-about{
+    background: var(--first-color-lighter);
+}
+
+
+.section-text .btn-about:hover{
+    border: 2px solid var(--first-color-lighter) !important;
+    color: var(--first-color);
+}
+
+
+/* Connect */
+.connect, 
+.mission{
+    background: linear-gradient(to right,#4da8da,#4da9da);
+}
+
+.connect .ctext h5{
+    font-weight: 700;
+    color: var(--text-color);
+    font-family: var(--font-family1);
+    font-size: var(--h1-font-size);
+}
+
+.connect .ctext p{
+    font-size: 14px;
+    color: var(--body-color-lighter);
+}
+
+.ctext a.btn{
+    border:1.2px solid var(--first-color);
+    padding: 5px 16px;
+    color: var(--title-color) !important;
+    text-transform: capitalize;
+    border-radius: 15px;
+    /* width: 120px; */
+}
+.ctext a.btn:hover
+ {
+    background: var(--body-color);
+    border: none;
+}
+.ctext a.btn:focus{
+    box-shadow: none !important;
+}
+
+.mission .section-text  a.btn-mission:hover{
+background-color: var(--body-color) !important;
+}
+.blog .section-text h4{
+    font-family: var(--font-family1);
+    color: var(--first-color-lighter);
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.blog .card{
+    border: 1px solid var(--first-color-lighter);    
+}
+.blog .card:hover{
+    box-shadow: 5px 5px 15px var(--first-color-lighter);
+
+}
+
+.blog .card{
+    border-radius:0 0 5rem!important;
+    height: 100% !important;
+}
+
+.blog .card-title{
+    color: var(--first-color-lighter);
+}
+@media (max-width:767px) {
+    header{
+        background-color: var(--body-color-lighter);
+     
+    
+    }
+}
