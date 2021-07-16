@@ -8,7 +8,7 @@
 setTimeout(function(){        
     $('#preloader').fadeOut();
     $('.preloader_img').delay(150).fadeOut('slow'); 
-}, 1500);
+}, 2500);
 // ============ Scroll Header ============
 function scrollHeader(){
     const nav = document.getElementById('header')
